@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/',function () {
+    return view('layout.layout');
 });
+Route::resource('docentes','DocenteController');
+Route::resource('aulas','AulaController');
