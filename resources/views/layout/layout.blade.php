@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Colegio Inmaculada Concepcion</title>
+    <title>COLEGIO INMACULADA CONCEPCION</title>
 
     <!--Bootstrap Core CSS -->
     <link href={{ URL::asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
@@ -35,8 +35,8 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation"
-             style="margin-bottom: 0 ; background-color: darkblue">
-            <div class="navbar-header">
+             style="margin-bottom: 0;background-color: darkblue">
+            <div class="navbar-header" >
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><p class="text-primary" style="color: white">CONTROL COLEGIO INMACULADA CONCEPCION</p></a>
+                <a class="navbar-brand" href="/"><p class="text-primary" style="color: white">CONTROL DEL COLEGIO INMACULADA CONCEPCION</p></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -58,7 +58,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Nuevo</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
                                     <em>Today</em>
                                     </span>
@@ -70,19 +70,19 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Nuevoa</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
                                         <em>At the Moment</em>
                                     </span>
                                 </div>
-                                <div>........</div>
+                                <div>.....</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Nuevo</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
                                         <em>Now</em>
                                     </span>
@@ -119,13 +119,13 @@
                 <!--/.dropdown -->
             </ul>
             <!--/.navbar-top-links -->
-            <div class="navbar-default sidebar" role="navigation" >
-                <div class="sidebar-nav navbar-collapse" >
-                    <ul class="nav" id="side-menu" >
-                        <li class="sidebar-search" >
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control"
-                                       placeholder="Search...">
+                                       placeholder="Buscar...">
                                 <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
@@ -135,15 +135,18 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-dashboard fa-fw"></i>
-                                Dashboard</a>
+                            <a href="/"><i class="fa fa-book fa-fw"></i>
+                                Coming Soon</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>
-                                Mantenimientos<span class="fa arrow"></span></a>
+                                MANTENIMIENTOS<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="/docentes">Docentes</a>
+                                </li>
+                                <li>
+                                    <a href="/apoderados">Apoderados</a>
                                 </li>
                                 <li>
                                     <a href="/aulas">Aulas</a>
@@ -160,7 +163,6 @@
         </nav>
         <!-- Page Content -->
         <div id="page-wrapper">
-            {{--@yield('content')--}}
             @yield('content')
         </div>
         <!-- /.page wrapper -->

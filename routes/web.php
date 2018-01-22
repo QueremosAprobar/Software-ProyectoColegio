@@ -9,12 +9,26 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 |
-*/
+ */
+//
+Route::resource('apoderados','ApoderadoController');
 
-
-
-Route::get('/',function () {
-    return view('layout.layout');
-});
 Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
+
+
+
+Route::get('/', 'InicioController@index');
+Route::get('inicio', 'InicioController@index');
+Route::get('about', 'InicioController@about');
+Route::get('contact', 'InicioController@contact');
+Route::get('layout', 'InicioController@layout');
+
+
+
+//
+//Route::get('/',function () {
+//    return view('layout.layout');
+//});
+
+
