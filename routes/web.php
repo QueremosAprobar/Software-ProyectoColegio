@@ -14,6 +14,10 @@
 Route::resource('apoderados','ApoderadoController');
 Route::resource('alumnos','AlumnoController');
 
+Route::resource('docentes','DocenteController');
+Route::resource('aulas','AulaController');
+
+
 
 Route::get('/', 'InicioController@index');
 Route::get('inicio', 'InicioController@index');
@@ -23,5 +27,9 @@ Route::get('layout', 'InicioController@layout');
 
 
 
+//
+//Route::get('/',function () {
+//    return view('layout.layout');
+//});
 
 

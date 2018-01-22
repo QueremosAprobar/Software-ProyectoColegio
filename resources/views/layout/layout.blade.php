@@ -9,29 +9,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>..::BILLPAZ-INTUIC::..</title>
+    <title>COLEGIO INMACULADA CONCEPCION</title>
 
     <!--Bootstrap Core CSS -->
     <link href={{ URL::asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
-    rel="stylesheet">
+            rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href={{ URL::asset('bower_components/metisMenu/dist/metisMenu.min.css') }}
-    rel="stylesheet">
+            rel="stylesheet">
 
-    @yield('estilos')
+@yield('estilos')
 
-    <!-- Custom CSS -->
+<!-- Custom CSS -->
     <link href={{ URL::asset('dist/css/sb-admin-2.css') }} rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href={{ URL::asset('bower_components/font-awesome/css/font-awesome.min.css')
     }} rel="stylesheet" type="text/css">
-    <!-- HTML% Shim and Respond.js IES support of HTML% elements and media queries -->
-    <!-- [if it IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></srcipt>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></srcipt>
-    <![endif]-->
 </head>
 
 <boby>
@@ -40,8 +35,8 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation"
-             style="margin-bottom: 0">
-            <div class="navbar-header">
+             style="margin-bottom: 0;background-color: darkblue">
+            <div class="navbar-header" >
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -49,53 +44,50 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><p class="text-primary">C.E.P. Inmaculada Concepcion</p></a>
+                <a class="navbar-brand" href="/"><p class="text-primary" style="color: white">CONTROL DEL COLEGIO INMACULADA CONCEPCION</p></a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-envelope fa-fw"></i> <i class="fa
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa
                     fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
+                                    <em>Today</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Pellentesque eleifend...</div>
+                                <div>........</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
-                                        <em>Yesteday</em>
+                                        <em>At the Moment</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Pellentesque eleifend...</div>
+                                <div>.....</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Ing Zamalloa</strong>
                                     <span class="pull-right text-muted">
-                                        <em>Yesteday</em>
+                                        <em>Now</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Pellentesque eleifend...</div>
+                                <div>........</div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -106,7 +98,7 @@
                             </a>
                         </li>
                     </ul>
-                            <!-- /.dropdown-messages -->
+                    <!-- /.dropdown-messages -->
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
@@ -132,9 +124,9 @@
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
-                                 <input type="text" class="form-control"
-                                        placeholder="Search...">
-                            <span class="input-group-btn">
+                                <input type="text" class="form-control"
+                                       placeholder="Buscar...">
+                                <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
@@ -143,28 +135,26 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-dashboard fa-fw"></i>
-                                Dashboard</a>
+                            <a href="/"><i class="fa fa-book fa-fw"></i>
+                                Coming Soon</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>
-                                Mantenimientos<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/#">Docentes</a>
-                                </li>
+                                MANTENIMIENTOS<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
                                 <li>
                                     <a href="/alumnos">Alumnos</a>
+                                </li>
+                                <li>
+                                    <a href="/docentes">Docentes</a>
                                 </li>
                                 <li>
                                     <a href="/apoderados">Apoderados</a>
                                 </li>
                                 <li>
-                                    <a href="/#">Aula</a>
+                                    <a href="/aulas">Aulas</a>
                                 </li>
-                                <li>
-                                    <a href="/#">Curso</a>
-                                </li>
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -182,7 +172,7 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src={{ URL::asset('bower_components/jquery/dist/jquery.min.js') }}></script>
+    <script src={{URL::asset('bower_components/jquery/dist/jquery.min.js')}}></script>
     <!-- Bootstrap Core JvaScript -->
     <script src={{ URL::asset('bower_components/bootstrap/dist/js/bootstrap.min.js')
     }}></script>
@@ -190,19 +180,10 @@
     <script src={{ URL::asset('bower_components/metisMenu/dist/metisMenu.min.js')
      }}></script>
 
-    @yield('js')
+@yield('js')
 <!-- Custom Theme JavaScript -->
     <script src={{ URL::asset('dist/js/sb-admin-2.js') }}></script>
     @yield('jsope')
 </boby>
 </html>
-
-
-
-
-
-
-
-
-
 
