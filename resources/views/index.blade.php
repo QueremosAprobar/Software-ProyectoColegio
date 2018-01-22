@@ -101,15 +101,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //header2 -->
 @if(!Auth::guest())
-	@if(Auth::user()->tipo=='Medico')
+	@if(Auth::user()->tipo=='Docente')
 		<div class="header wow zoomIn">
 			<div class="container">
 				<div class="header_right">
 					<div class="login">
 						<ul>
 							<li><a id="btn_Mostrar_Modificar_Datos_Medico">Perfil</a></li>
-							<li><a href="/medcitas/{{Auth::user()->dni}}/">Consultas del Dia</a></li>
-							<li><a href="/reportes/medico/">Reportes</a></li>
+							<li><a href="/#">Horarios</a></li>
+							<li><a href="/#">Subir Notas</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -118,13 +118,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	@endif
-	@if(Auth::user()->tipo=='Paciente')
+	@if(Auth::user()->tipo=='Alumno')
 	<div class="header wow zoomIn">
 			<div class="container">
 				<div class="header_right">
 					<div class="login">
 						<ul>
-						<li><a href="#book"id="Cargar_Datos"> Perfil</a></li>
+						<li><a href="/#"id="Cargar_Datos"> Perfil</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -162,7 +162,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item"><a href="inicio" class="menu__link">Inicio</a></li>
 							<li class="menu__item"><a href="about" class="menu__link">Sobre nosotros</a></li>
-							<li class="menu__item"><a href="contact" class="menu__link">Contáctanos</a></li>						
+							<li class="menu__item"><a href="contact" class="menu__link">Contáctanos</a></li>
+							<li class="menu__item"><a href="layout" class="menu__link">LAYOUT</a></li>						
 						</ul>
 					</nav>
 				</div>

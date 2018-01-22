@@ -22,4 +22,7 @@ class InicioController extends Controller
   public function contact(){
     return view('contact');
   }
+  public function layout(){
+    return view('layout.layout');
+  }
 }

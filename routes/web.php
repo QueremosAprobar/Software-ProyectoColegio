@@ -11,10 +11,16 @@
 |
  */
 //
+Route::resource('apoderados','ApoderadoController');
+
+
 Route::get('/', 'InicioController@index');
 Route::get('inicio', 'InicioController@index');
 Route::get('about', 'InicioController@about');
 Route::get('contact', 'InicioController@contact');
+Route::get('layout', 'InicioController@layout');
+
+
 
 
 
