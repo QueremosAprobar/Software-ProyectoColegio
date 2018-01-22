@@ -12,6 +12,7 @@
  */
 //
 Route::resource('apoderados','ApoderadoController');
+Route::resource('alumnos','AlumnoController');
 
 
 Route::get('/', 'InicioController@index');

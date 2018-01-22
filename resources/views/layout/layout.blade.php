@@ -154,7 +154,7 @@
                                     <a href="/#">Docentes</a>
                                 </li>
                                 <li>
-                                    <a href="/#">Alumnos</a>
+                                    <a href="/alumnos">Alumnos</a>
                                 </li>
                                 <li>
                                     <a href="/apoderados">Apoderados</a>
