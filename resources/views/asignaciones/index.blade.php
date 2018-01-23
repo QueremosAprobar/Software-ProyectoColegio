@@ -39,11 +39,71 @@
                                     <input type="text" class="form-control" value="{!! $docente->especialidad !!}" disabled="" >
                                 </div>
 
-                                
-
-
-
                                 <button type="button" class="btn btn-danger" onClick="location.href='/docentes'">Volver</button>
+                                <button type="button" class="btn btn-primary pull-right" onClick="#">Cargar Horario</button>
+                                <br><br>
+                                <table class="table table-bordered table-responsive table-striped">
+                                  <thead class="bg-info text-white">
+                                    <th>HORA</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miercoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.00;8.30]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.30;9.00]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.30;9.00]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.30;9.00]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.30;9.00]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="bg-info text-white">[8.30;9.00]</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+
                             </form>
                         </div>
                     </div>
