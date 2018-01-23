@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header_left" data-wow-duration="2s" data-wow-delay="0.5s">
 			<ul>
 				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(084) 000000</li>
-				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>inmaculada_concepcion@google.edu.pe</li>	
+				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>inmaculada_concepcion@google.edu.pe</li>
 			</ul>
 		</div>
 		<div class="header_right">
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="menu__item"><a href="inicio" class="menu__link">Inicio</a></li>
 							<li class="menu__item"><a href="about" class="menu__link">Sobre nosotros</a></li>
 							<li class="menu__item"><a href="contact" class="menu__link">Contáctanos</a></li>
-							<li class="menu__item"><a href="layout" class="menu__link">LAYOUT</a></li>						
+							<li class="menu__item"><a href="layout" class="menu__link">LAYOUT</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -244,7 +244,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-6 contact-right wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
 			<bl>Información</bl>
 			<div class="strip"></div>
-			<p class="">El C.E.P. Inmaculada Concepcion cusco esta al servicio de la problacion ofreciendo a los alumnos una educacion en valores y respeto.</p>			
+			<p class="">El C.E.P. Inmaculada Concepcion cusco esta al servicio de la problacion ofreciendo a los alumnos una educacion en valores y respeto.</p>
 			<div class="strip"></div>
 		</div>
 		<div class="col-md-6 contact-left wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
@@ -1027,5 +1027,3 @@ $(document).on("click",".claseboton",function(){
 </script>
 </body>
 </html>
-
-			

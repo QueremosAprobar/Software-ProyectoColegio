@@ -87,6 +87,11 @@
                                         <td>{{ $docente->estado }}</td>
                                         <td class="center">
                                             <ul class="nav nav-pills">
+                                              <li>
+                                                  <a href="{!! action('AsignacionController@edit', $docente->dnidocente) !!}" title="Asignar carga">
+                                                      <spam class="glyphicon glyphicon-calendar"></spam>
+                                                  </a>
+                                              </li>
                                                 <li>
                                                     <a href="{!! action('DocenteController@show', $docente->dnidocente) !!}" title="Ver">
                                                         <spam class="glyphicon glyphicon-search"></spam>

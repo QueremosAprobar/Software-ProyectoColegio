@@ -15,7 +15,7 @@ Route::resource('apoderados','ApoderadoController');
 
 Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
-
+Route::resource('asignaciones','AsignacionController');
 
 
 Route::get('/', 'InicioController@index');
@@ -30,5 +30,3 @@ Route::get('layout', 'InicioController@layout');
 //Route::get('/',function () {
 //    return view('layout.layout');
 //});
-
-

@@ -151,7 +151,7 @@
                                 <li>
                                     <a href="/aulas">Aulas</a>
                                 </li>
-
+                                
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -183,4 +183,3 @@
     @yield('jsope')
 </boby>
 </html>
-

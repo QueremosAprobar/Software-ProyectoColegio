@@ -24,19 +24,6 @@
                                     <input type="text" class="form-control" value="{!! $docente->dnidocente !!}" disabled="" >
                                 </div>
 
-
-                                <div class="form-group ">
-                                    <label>CONTRASEÑA</label>
-                                    <input type="password" class="form-control" value="{!! $docente->contraseña !!}" disabled="" >
-                                </div>
-
-
-                                <div class="form-group ">
-                                    <label>ID DOCENTE</label>
-                                    <input type="text" class="form-control" value="{!! $docente->iddocente !!}" disabled="" >
-                                </div>
-
-
                                 <div class="form-group ">
                                     <label>NOMBRES</label>
                                     <input type="text" class="form-control" value="{!! $docente->nombre !!}" style="text-transform:uppercase;" onkeyup="javascript:this.value.toUpperCase();" disabled="" >
@@ -48,41 +35,11 @@
 
 
                                 <div class="form-group ">
-                                    <label>DIRECCION</label>
-                                    <input type="text" class="form-control" value="{!! $docente->direccion !!}" disabled="" >
-                                </div>
-
-
-                                <div class="form-group ">
-                                    <label>TELEFONO</label>
-                                    <input type="tel" class="form-control" value="{!! $docente->telefono !!}" disabled="" >
-                                </div>
-
-
-                                <div class="form-group ">
                                     <label>ESPECIALIDAD</label>
                                     <input type="text" class="form-control" value="{!! $docente->especialidad !!}" disabled="" >
                                 </div>
 
-
-
-                                <div class="form-group ">
-                                    <label>EMAIL</label>
-                                    <input type="email" class="form-control" value="{!! $docente->email !!}" style="text-transform: lowercase;" onkeyup="javascript:this.value.toLowerCase();" disabled="" >
-                                </div>
-
-
-
-                                <div class="form-group ">
-                                    <label>SEXO</label>
-                                    <input type="text" class="form-control" value="{!! $docente->sexo !!}" disabled="" >
-                                </div>
-
-
-                                <div class="form-group ">
-                                    <label>ESTADO</label>
-                                    <input type="text" class="form-control" value="{!! $docente->estado !!}" disabled="" >
-                                </div>
+                                
 
 
 
