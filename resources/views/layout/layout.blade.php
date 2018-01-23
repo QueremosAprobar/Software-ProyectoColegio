@@ -141,7 +141,10 @@
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>
                                 MANTENIMIENTOS<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <ul class="nav nav-second-level">                                
+                                <li>
+                                    <a href="/alumnos">Alumnos</a>
+                                </li>
                                 <li>
                                     <a href="/docentes">Docentes</a>
                                 </li>

@@ -12,6 +12,7 @@
  */
 //
 Route::resource('apoderados','ApoderadoController');
+Route::resource('alumnos','AlumnoController');
 
 Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
