@@ -22,6 +22,9 @@ class DocenteController extends Controller
     public $item=['contraseña','iddocente','nombre','apellido','direccion','telefono','especialidad','email','sexo','estado'];
     public $tabla='docentes';
     public $tabla1='cursos';
+
+
+
     public function index()
     {
         //
@@ -144,4 +147,5 @@ class DocenteController extends Controller
         DB::table($this->tabla)->where($this->item_id,$id)->update(['estado'=>$estado]);
         return redirect($this->tabla);
     }
+
 }
