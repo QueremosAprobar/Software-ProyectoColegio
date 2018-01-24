@@ -30,7 +30,7 @@
                 <div class="panel-heading"></div>
                 <!--.panel-heading-->
                 <div class="panel-body">
-                    <div class="dataTables_wrapper">
+                    <div class="dataTables_wrapper" style="overflow-x: auto"> {{--Scroll!!!!--}}
                         @if($docentes->isEmpty())
                             <div class="alert alert-success">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
