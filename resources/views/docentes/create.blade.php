@@ -8,7 +8,7 @@
         {{--/.col-lg-12--}}
     </div>
     {{--/.row--}}
-    <div class="row">
+    <div class="row" >
         <div class="col-lg-12">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -35,14 +35,14 @@
 
 
                                 <div class="form-group">
-                                    <label>CONTRASEñA</label>
+                                    <label>CONTRASEÑA</label>
                                     <input type="password" class="form-control" name="contraseña" placeholder="***********" >
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>ID DOCENTE</label>
-                                    <input type="text" class="form-control" name="iddocente" placeholder="D001" >
+                                    <input type="text" class="form-control" name="iddocente" placeholder="D001" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
 
 
@@ -67,6 +67,16 @@
                                 <div class="form-group">
                                     <label>TELEFONO</label>
                                     <input type="tel" class="form-control" name="telefono" placeholder="974000000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>NIVEL</label>
+                                    {{--<input type="text" class="form-control" name="nivel" >--}}
+                                    <select id="NIVEL" name="NIVEL" class="form-control">
+                                        <option>INICIAL</option>
+                                        <option>PRIMARIA</option>
+                                        <option>SECUNDARIA</option>
+                                    </select>
                                 </div>
 
 

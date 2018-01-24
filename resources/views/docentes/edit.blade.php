@@ -71,22 +71,28 @@
                                     <input type="tel" class="form-control" value="{!! $docente->telefono !!}" name="telefono">
                                 </div>
 
+                                <div class="form-group">
+                                    <label>NIVEL</label>
+                                    <input type="text" class="form-control" value="{!! $docente->nivel !!}" name="telefono">
+                                </div>
 
-                                    <div class="form-group">
-                                        <label>ESPECIALIDAD</label>
-                                        <select id="ESPECIALIDAD" name="especialidad" class="form-control">
-                                            @foreach($cursos as $curso)
-                                                @if($curso->idcurso==$docente->especialidad)
-                                                    <option selected value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
-                                                @else
-                                                    {{--@if($curso->estado == "HABILITADO")--}}
-                                                    <option value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
-                                                    {{--@endif--}}
-                                                @endif
-                                            @endforeach
-                                        </select>
 
-                                    </div>
+                                    @if($docente->nivel=="SECUNDARIA")
+                                        <div class="form-group">
+                                            <label>ESPECIALIDAD</label>
+                                            <select id="ESPECIALIDAD" name="especialidad" class="form-control">
+                                                @foreach($cursos as $curso)
+                                                    @if($curso->idcurso==$docente->especialidad)
+                                                        <option selected value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
+                                                    @else
+                                                        {{--@if($curso->estado == "HABILITADO")--}}
+                                                        <option value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
+                                                        {{--@endif--}}
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    @endif
 
 
                                     <div class="form-group">

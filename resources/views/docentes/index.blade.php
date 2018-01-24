@@ -59,7 +59,13 @@
                                     <th>Apellidos</th>
                                     <th>Direccion</th>
                                     <th>Telefono</th>
-                                    <th>Especialidad</th>
+                                    <th>Nivel</th>
+                                    @foreach($docentes as $docente)
+                                        @if($docente->nivel == "SECUNDARIA")
+                                            <th>Especialidad</th>
+                                        @endif
+
+                                    @endforeach
                                     <th>Email</th>
                                     <th>Sexo</th>
                                     <th>Estado</th>
@@ -79,7 +85,11 @@
                                         <td>{{ $docente->apellido }}</td>
                                         <td>{{ $docente->direccion }}</td>
                                         <td>{{ $docente->telefono }}</td>
-                                        <td>{{ $docente->especialidad }}</td>
+                                        <td>{{ $docente->nivel }}</td>
+                                        @if($docente->nivel == "SECUNDARIA")
+                                            <td>{{ $docente->especialidad }}</td>
+
+                                        @endif
                                         {{--combobox de especialidad--}}
                                         <td>{{ $docente->email }}</td>
                                         <td>{{ $docente->sexo }}</td>
