@@ -25,10 +25,10 @@ class ApoderadoFormRequest extends FormRequest
     {
         return [
             //
-            'nombre'='requied|min:3',
-            'apellido'='requied|min:3',
-            'direccion'='requied|min:3',
-            'telefono'='requied|min:3',
+            'nombre'=>'requied|min:3',
+            'apellido'=>'requied|min:3',
+            'direccion'=>'requied|min:3',
+            'telefono'=>'requied|min:3',
         ];
     }
 }

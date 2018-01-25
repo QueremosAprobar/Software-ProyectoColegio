@@ -30,7 +30,7 @@
                 <div class="panel-heading"></div>
                 <!--.panel-heading-->
                 <div class="panel-body">
-                    <div class="dataTables_wrapper" style="overflow-x: auto"> {{--Scroll!!!!--}}
+                    <div class="dataTables" style="overflow-x: auto"> {{--Scroll!!!!--}}
                         @if($docentes->isEmpty())
                             <div class="alert alert-success">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
@@ -53,19 +53,14 @@
                                 <thead>
                                 <tr>
                                     <th>DNI</th>
-                                    <th>Contraseña</th>
+                                    {{--<th>Contraseña</th>--}}
                                     <th>IDDocente</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
                                     <th>Direccion</th>
                                     <th>Telefono</th>
                                     <th>Nivel</th>
-                                    @foreach($docentes as $docente)
-                                        @if($docente->nivel == "SECUNDARIA")
-                                            <th>Especialidad</th>
-                                        @endif
-
-                                    @endforeach
+                                    <th>Especialidad</th>
                                     <th>Email</th>
                                     <th>Sexo</th>
                                     <th>Estado</th>
@@ -79,7 +74,7 @@
 
                                     <tr class="odd gradeA" rol="row">
                                         <td>{{ $docente->dnidocente }}</td>
-                                        <td>{{ $docente->contraseña }}</td>
+                                        {{--<td>{{ $docente->contraseña }}</td>--}}
                                         <td>{{ $docente->iddocente }}</td>
                                         <td>{{ $docente->nombre }}</td>
                                         <td>{{ $docente->apellido }}</td>
@@ -88,7 +83,8 @@
                                         <td>{{ $docente->nivel }}</td>
                                         @if($docente->nivel == "SECUNDARIA")
                                             <td>{{ $docente->especialidad }}</td>
-
+                                        @else
+                                            <td>{{ $docente->especialidad =""}}</td>
                                         @endif
                                         {{--combobox de especialidad--}}
                                         <td>{{ $docente->email }}</td>
@@ -97,22 +93,21 @@
                                         <td>{{ $docente->estado }}</td>
                                         <td class="center">
                                             <ul class="nav nav-pills">
-                                              <li>
+
                                                   <a href="{!! action('AsignacionController@edit', $docente->dnidocente) !!}" title="Asignar carga">
                                                       <spam class="glyphicon glyphicon-calendar"></spam>
                                                   </a>
-                                              </li>
-                                                <li>
+
+
                                                     <a href="{!! action('DocenteController@show', $docente->dnidocente) !!}" title="Ver">
                                                         <spam class="glyphicon glyphicon-search"></spam>
                                                     </a>
-                                                </li>
-                                                <li>
+
+
                                                     <a href="{!! action('DocenteController@edit', $docente->dnidocente) !!}" title="Editar">
                                                         <spam class="glyphicon glyphicon-pencil"></spam>
                                                     </a>
-                                                </li>
-                                                <li>
+
                                                     @if($docente->estado == "INHABILITADO")
                                                         <button data-target="#confirmar-{{ $docente->dnidocente}}" data-toggle="modal" >
                                                             <a title="HABILITAR">
@@ -124,7 +119,7 @@
                                                                 <spam class="glyphicon glyphicon-alert"></spam>
                                                             </a></button>
                                                     @endif
-                                                </li>
+
                                             </ul>
                                         </td>
                                     </tr>
