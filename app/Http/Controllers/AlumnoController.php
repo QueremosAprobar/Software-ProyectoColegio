@@ -77,9 +77,9 @@ class AlumnoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($dnialumno)
     {
-        $alumno=Alumno::findOrFail($id);
+        $alumno=Alumno::findOrFail($dnialumno);
         return view('alumnos.edit',['alumno'=>$alumno]);
     }
 
