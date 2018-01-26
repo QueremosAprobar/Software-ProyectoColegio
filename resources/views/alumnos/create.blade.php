@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label>Telefono</label>
                                     <input type="text" class="form-control" placeholder="" name="telefono">
-                                </div>                             
+                                </div>
                                 <div class="form-group">
                                     <label>Sexo</label>
                                     <select name="sexo" class="form-control">
@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     <label>Departamento</label>
                                     <input type="text" class="form-control" name="departamento" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div>                                                                
+                                </div>
 
                                 <button type="submit" class="btn btn-success">Guardar</button>
                                 <button type="reset" class="btn btn-warning">Limpiar</button>
