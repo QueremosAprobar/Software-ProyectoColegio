@@ -154,7 +154,7 @@
                                 <li>
                                     <a href="/aulas">Aulas</a>
                                 </li>
-                                <li> <a href="/viewalumnos">ViewAlumnos</></li>
+                                <li> <a href="/viewalumnos">ViewAlumnos</a></li>
 
                             </ul>
                             <!-- /.nav-second-level -->
