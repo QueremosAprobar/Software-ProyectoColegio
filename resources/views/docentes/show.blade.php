@@ -58,12 +58,18 @@
                                     <input type="tel" class="form-control" value="{!! $docente->telefono !!}" disabled="" >
                                 </div>
 
-
                                 <div class="form-group ">
-                                    <label>ESPECIALIDAD</label>
-                                    <input type="text" class="form-control" value="{!! $docente->especialidad !!}" disabled="" >
+                                    <label>NIVEL</label>
+                                    <input type="text" class="form-control" value="{!! $docente->nivel !!}" disabled="" >
                                 </div>
 
+
+                                @if($docente->nivel=="SECUNDARIA")
+                                    <div class="form-group ">
+                                        <label>ESPECIALIDAD</label>
+                                        <input type="text" class="form-control" value="{!! $docente->especialidad !!}" disabled="" >
+                                    </div>
+                                @endif
 
 
                                 <div class="form-group ">

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ApoderadoFormRequest extends FormRequest
+class NotasFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,12 @@ class ApoderadoFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
-            'nombre'=>'requied|min:3',
-            'apellido'=>'requied|min:3',
-            'direccion'=>'requied|min:3',
-            'telefono'=>'requied|min:3',
+            'idcurso'=>'required|min:10',
+            'dnialumno'=>'required|min:8',
+            'p1'=>'required|min:4',
+            'p2'=>'required|min:4',
+            'p3'=>'required|min:4',
+            'promedio'=>'required|min:4',
         ];
     }
 }

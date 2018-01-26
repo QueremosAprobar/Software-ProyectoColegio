@@ -44,7 +44,7 @@
 
                                     <div class="form-group">
                                         <label>ID DOCENTE</label>
-                                        <input type="text" class="form-control" value="{!! $docente->iddocente !!}" name="iddocente">
+                                        <input type="text" class="form-control" value="{!! $docente->iddocente !!}" name="iddocente" onkeyup="javascript:this.value=this.value.toUpperCase();"
                                     </div>
 
 
@@ -62,7 +62,7 @@
 
                                 <div class="form-group">
                                     <label>DIRECCION</label>
-                                    <input type="text" class="form-control" value="{!! $docente->direccion !!}" name="direccion">
+                                    <input type="text" class="form-control" value="{!! $docente->direccion !!}" name="direccion" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
 
 
@@ -71,22 +71,45 @@
                                     <input type="tel" class="form-control" value="{!! $docente->telefono !!}" name="telefono">
                                 </div>
 
+                                <div class="form-group">
+                                    <label>NIVEL</label>
+                                    {{--<input type="text" class="form-control" value="{!! $docente->nivel !!}" name="nivel">--}}
+                                    <select class="form-control" id="NIVEL" name="nivel" onchange="myfunction()">
+                                        @if($docente->nivel =="INICIAL")
+                                            <option selected>INICIAL</option>
+                                            <option>PRIMARIA</option>
+                                            <option>SECUNDARIA</option>
+                                        @else
+                                            @if($docente->nivel =="PRIMARIA")
+                                                <option selected>PRIMARIA</option>
+                                                <option>INICIAL</option>
+                                                <option>SECUNDARIA</option>
+                                                @else ($docente->nivel =="SECUNDARIA")
+                                                <option selected>SECUNDARIA</option>
+                                                <option>INICIAL</option>
+                                                <option>PRIMARIA</option>
+                                            @endif
+                                        @endif
+                                    </select>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label>ESPECIALIDAD</label>
-                                        <select id="ESPECIALIDAD" name="especialidad" class="form-control">
-                                            @foreach($cursos as $curso)
-                                                @if($curso->idcurso==$docente->especialidad)
-                                                    <option selected value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
-                                                @else
-                                                    {{--@if($curso->estado == "HABILITADO")--}}
-                                                    <option value="{{$curso->idcurso}}">{{$curso->nombre}}</option>
-                                                    {{--@endif--}}
-                                                @endif
-                                            @endforeach
-                                        </select>
+                                @if($docente->nivel =="SECUNDARIA")
+                                        <div class="form-group" id="special">
+                                            <label>ESPECIALIDAD</label>
+                                            <select id="ESPECIALIDAD" name="especialidad" class="form-control">
+                                                @foreach($cursos as $curso)
+                                                    @if($curso->nombre==$docente->especialidad)
+                                                        <option selected value="{{$curso->nombre}}">{{$curso->nombre}}</option>
+                                                    @else
+                                                        {{--@if($curso->estado == "HABILITADO")--}}
+                                                        <option value="{{$curso->nombre}}">{{$curso->nombre}}</option>
+                                                        {{--@endif--}}
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                @endif
 
-                                    </div>
 
 
                                     <div class="form-group">
@@ -134,3 +157,17 @@
             </div>
         </div>
     </div>
+<script>
+
+    function myfunction() {
+        var n= document.getElementById("NIVEL").value;
+        var m= document.getElementById("special");
+        if (n=="SECUNDARIA")
+        {
+            m.style.display='block';
+        }else{
+            m.style.display='none';
+
+        }
+    }
+</script>

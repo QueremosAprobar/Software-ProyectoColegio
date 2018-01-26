@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
-//use App\Http\Requests\DocenteFormRequest;
+use App\Http\Requests\DocenteFormRequest;
 use App\Docente;
 
 class DocenteController extends Controller
@@ -19,7 +19,7 @@ class DocenteController extends Controller
      */
 
     public $item_id='dnidocente';
-    public $item=['contraseña','iddocente','nombre','apellido','direccion','telefono','especialidad','email','sexo','estado'];
+    public $item=['contraseña','iddocente','nombre','apellido','direccion','telefono','nivel','especialidad','email','sexo','estado'];
     public $tabla='docentes';
     public $tabla1='cursos';
 
@@ -41,7 +41,8 @@ class DocenteController extends Controller
     {
         //
         $t1 = DB::table($this->tabla1)->get();
-        return view($this->tabla.'.create',[$this->tabla1=>$t1]);
+        $t = DB::table($this->tabla)->get();
+        return view($this->tabla.'.create',[$this->tabla1=>$t1,$this->tabla=>$t]);
     }
 
     /**
@@ -50,7 +51,7 @@ class DocenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DocenteFormRequest $request)
     {
         //
         $docente = new Docente;
@@ -61,6 +62,7 @@ class DocenteController extends Controller
         $docente->apellido=$request->get('apellido');
         $docente->direccion=$request->get('direccion');
         $docente->telefono=$request->get('telefono');
+        $docente->nivel=$request->get('nivel');
         $docente->especialidad=$request->get('especialidad');
         $docente->email=$request->get('email');
         $docente->sexo=$request->get('sexo');
@@ -123,7 +125,10 @@ class DocenteController extends Controller
         $docente->apellido=$request->get('apellido');
         $docente->direccion=$request->get('direccion');
         $docente->telefono=$request->get('telefono');
-        $docente->especialidad=$request->get('especialidad');
+        $docente->nivel=$request->get('nivel');
+//        if ($docente->nivel=$request->get('nivel')=="SECUNDARIA"){
+            $docente->especialidad=$request->get('especialidad');
+//        }
         $docente->email=$request->get('email');
         $docente->sexo=$request->get('sexo');
         $docente->estado=$request->get('estado');
