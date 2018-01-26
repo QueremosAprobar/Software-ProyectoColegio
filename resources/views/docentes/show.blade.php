@@ -32,12 +32,6 @@
 
 
                                 <div class="form-group ">
-                                    <label>ID DOCENTE</label>
-                                    <input type="text" class="form-control" value="{!! $docente->iddocente !!}" disabled="" >
-                                </div>
-
-
-                                <div class="form-group ">
                                     <label>NOMBRES</label>
                                     <input type="text" class="form-control" value="{!! $docente->nombre !!}" style="text-transform:uppercase;" onkeyup="javascript:this.value.toUpperCase();" disabled="" >
                                 </div>
@@ -89,7 +83,6 @@
                                     <label>ESTADO</label>
                                     <input type="text" class="form-control" value="{!! $docente->estado !!}" disabled="" >
                                 </div>
-
 
 
                                 <button type="button" class="btn btn-danger" onClick="location.href='/docentes'">Volver</button>

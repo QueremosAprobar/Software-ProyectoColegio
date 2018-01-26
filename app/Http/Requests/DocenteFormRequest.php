@@ -27,7 +27,7 @@ class DocenteFormRequest extends FormRequest
             //
             'dnidocente'=>['required','unique:docentes','size:8','regex:/^[0-9]+$/'],
             'contraseña'=>['required','max:30','min:6'],
-            'iddocente'=>['required','size:4','regex:/^[0-9A-Z]+$/'],
+//            'iddocente'=>['required','size:4','regex:/^[0-9A-Z]+$/'],
             'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
             'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
             'direccion'=>['required','max:100'],

@@ -41,12 +41,6 @@
 
 
                                 <div class="form-group">
-                                    <label>ID DOCENTE</label>
-                                    <input type="text" class="form-control" name="iddocente" placeholder="D001" value="{{old('iddocente')}}"onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div>
-
-
-                                <div class="form-group">
                                     <label>NOMBRES</label>
                                     <input type="text" class="form-control"  name="nombre" placeholder="" value="{{old('nombre')}}"onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>

@@ -19,7 +19,7 @@ class DocenteController extends Controller
      */
 
     public $item_id='dnidocente';
-    public $item=['contraseña','iddocente','nombre','apellido','direccion','telefono','nivel','especialidad','email','sexo','estado'];
+    public $item=['contraseña','nombre','apellido','direccion','telefono','nivel','especialidad','email','sexo','estado'];
     public $tabla='docentes';
     public $tabla1='cursos';
 
@@ -57,7 +57,6 @@ class DocenteController extends Controller
         $docente = new Docente;
         $docente->dnidocente=$request->get('dnidocente');
         $docente->contraseña=$request->get('contraseña');
-        $docente->iddocente=$request->get('iddocente');
         $docente->nombre=$request->get('nombre');
         $docente->apellido=$request->get('apellido');
         $docente->direccion=$request->get('direccion');
@@ -117,18 +116,26 @@ class DocenteController extends Controller
      */
     public function update(Request $request, $dnidocente)
     {
+        $this->validate($request,[
+            'contraseña'=>['required','max:30','min:6'],
+            'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'direccion'=>['required','max:100'],
+            'telefono'=>['required','size:9','regex:/^[0-9]+$/'],
+            'email'=>['required','max:50','email']
+        ]);
+
         $docente= Docente::findOrFail($dnidocente);
         $docente->dnidocente=$request->get('dnidocente');
         $docente->contraseña=$request->get('contraseña');
-        $docente->iddocente=$request->get('iddocente');
         $docente->nombre=$request->get('nombre');
         $docente->apellido=$request->get('apellido');
         $docente->direccion=$request->get('direccion');
         $docente->telefono=$request->get('telefono');
         $docente->nivel=$request->get('nivel');
-//        if ($docente->nivel=$request->get('nivel')=="SECUNDARIA"){
+
             $docente->especialidad=$request->get('especialidad');
-//        }
+
         $docente->email=$request->get('email');
         $docente->sexo=$request->get('sexo');
         $docente->estado=$request->get('estado');

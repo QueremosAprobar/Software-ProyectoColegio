@@ -54,7 +54,6 @@
                                 <tr>
                                     <th>DNI</th>
                                     {{--<th>Contraseña</th>--}}
-                                    <th>IDDocente</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
                                     <th>Direccion</th>
@@ -75,7 +74,6 @@
                                     <tr class="odd gradeA" rol="row">
                                         <td>{{ $docente->dnidocente }}</td>
                                         {{--<td>{{ $docente->contraseña }}</td>--}}
-                                        <td>{{ $docente->iddocente }}</td>
                                         <td>{{ $docente->nombre }}</td>
                                         <td>{{ $docente->apellido }}</td>
                                         <td>{{ $docente->direccion }}</td>
