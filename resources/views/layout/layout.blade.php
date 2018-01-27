@@ -141,7 +141,7 @@
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>
                                 MANTENIMIENTOS<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">                                
+                            <ul class="nav nav-second-level">
                                 <li>
                                     <a href="/alumnos">Alumnos</a>
                                 </li>
@@ -154,11 +154,16 @@
                                 <li>
                                     <a href="/aulas">Aulas</a>
                                 </li>
+<<<<<<< HEAD
                                 <li>
                                     <a href="/notas">Notas</a>
                                 </li>
                                 
                                 
+=======
+                                <li> <a href="/viewalumnos">ViewAlumnos</a></></li>
+
+>>>>>>> 478261e896106532ed7a7818fc1613561766d853
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
