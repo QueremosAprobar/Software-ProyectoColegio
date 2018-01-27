@@ -8,5 +8,5 @@ class Apoderado extends Model
 {
     //alscnlsakndksandlkasndklansdkaskldas
     public $timestamps = false;
-    protected $primaryKey = 'dniapoderado';
+    protected $primaryKey = 'dni';
 }

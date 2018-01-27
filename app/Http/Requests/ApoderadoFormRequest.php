@@ -25,10 +25,11 @@ class ApoderadoFormRequest extends FormRequest
     {
         return [
             //
-            'nombre'=>'requied|min:3',
-            'apellido'=>'requied|min:3',
-            'direccion'=>'requied|min:3',
-            'telefono'=>'requied|min:3',
+            'dni'=>'required|size:8|regex:/^[0-9]+$/|unique',
+            'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'direccion'=>['required','max:100'],
+            'telefono'=>['required','size:9','regex:/^[0-9]+$/'],
         ];
     }
 }

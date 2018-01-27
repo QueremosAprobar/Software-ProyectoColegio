@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\AlumnoFormRequest;
+use Illuminate\Support\Facades\DB;
+
+use App\Http\Requests\AlunnoFormRequest;
 use App\Alumno;
 
 
@@ -39,13 +40,13 @@ class AlumnoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AlunnoFormRequest $request)
     {
         //
         $alumno = new Alumno;
         $alumno->dnialumno=$request->get('dnialumno');
-        $alumno->contraseña=$request->get('contraseña');
         $alumno->nombre=$request->get('nombre');
+        $alumno->contraseña=$request->get('contraseña');        
         $alumno->apellido=$request->get('apellido');
         $alumno->fechanac=$request->get('fechanac');
         $alumno->telefono=$request->get('telefono');
@@ -90,7 +91,7 @@ class AlumnoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(AlumnoFormRequest $request, $id)
+    public function update(AlunnoFormRequest $request, $id)
     {
         $alumno=Alumno::findOrFail($id);
         $alumno->contraseña=$request->get('contraseña');

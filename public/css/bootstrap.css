@@ -1598,14 +1598,14 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 568px) {
   .container {
-    width: 750px;
+    width: 550px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 792px) {
   .container {
-    width: 970px;
+    width: 770px;
   }
 }
 @media (min-width: 1200px) {

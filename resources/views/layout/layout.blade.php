@@ -154,6 +154,10 @@
                                 <li>
                                     <a href="/aulas">Aulas</a>
                                 </li>
+                                <li>
+                                    <a href="/notas">Notas</a>
+                                </li>
+                                
                                 
                             </ul>
                             <!-- /.nav-second-level -->

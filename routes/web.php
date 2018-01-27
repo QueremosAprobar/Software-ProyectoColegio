@@ -18,7 +18,6 @@ Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
 Route::resource('asignaciones','AsignacionController');
 
-Route::resource('notas','NotasController');
 
 
 Route::get('/', 'InicioController@index');

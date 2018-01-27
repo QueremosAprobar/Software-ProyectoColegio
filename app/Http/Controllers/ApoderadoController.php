@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ApoderadoFormRequest;
 use App\Apoderado;
 
@@ -40,11 +40,11 @@ class ApoderadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ApoderadoFormRequest $request)
     {
         //
         $apoderado=new Apoderado;
-        $apoderado->dniapoderado=$request->get('dniapoderado');
+        $apoderado->dni=$request->get('dni');
         $apoderado->nombre=$request->get('nombre');
         $apoderado->apellido=$request->get('apellido');
         $apoderado->sexo=$request->get('sexo');
@@ -61,10 +61,10 @@ class ApoderadoController extends Controller
      * @param  int  $dniapoderado
      * @return \Illuminate\Http\Response
      */
-    public function show($dniapoderado)
+    public function show($dni)
     {
         //
-        $apoderado=Apoderado::findOrFail($dniapoderado);
+        $apoderado=Apoderado::findOrFail($dni);
         //return view('alumnos.show',compact('alumno'));
         return view('apoderados.show',['apoderado'=>$apoderado]);
     }
@@ -75,10 +75,10 @@ class ApoderadoController extends Controller
      * @param  int  $dniapoderado
      * @return \Illuminate\Http\Response
      */
-    public function edit($dniapoderado)
+    public function edit($dni)
     {
         //
-        $apoderado=Apoderado::findOrFail($dniapoderado);
+        $apoderado=Apoderado::findOrFail($dni);
         //return View('alumnos.edit',compact('alumno'));
         return view('apoderados.edit',['apoderado'=>$apoderado]);
     }
@@ -90,9 +90,9 @@ class ApoderadoController extends Controller
      * @param  int  $dniapoderado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $dniapoderado)
+    public function update(ApoderadoFormRequest $request, $dni)
     {
-        $apoderado=Apoderado::findOrFail($dniapoderado);
+        $apoderado=Apoderado::findOrFail($dni);
         $apoderado->nombre=$request->get('nombre');
         $apoderado->apellido=$request->get('apellido');
         $apoderado->sexo=$request->get('sexo');
@@ -109,11 +109,11 @@ class ApoderadoController extends Controller
      * @param  int  $dniapoderado
      * @return \Illuminate\Http\Response
      */
-    public function destroy($dniapoderado)
+    public function destroy($dni)
     {
-        $apoderado=Apoderado::findOrFail($dniapoderado);
+        $apoderado=Apoderado::findOrFail($dni);
         $apoderado->delete();
-        return redirect('/apoderados')->with('mensaje','El apoderado con id:'.$dniapoderado.',se elimino correctamente!!');
+        return redirect('/apoderados')->with('mensaje','El apoderado con id:'.$dni.',se elimino correctamente!!');
         //DB::table('alumnos')->where('id',$dniapoderado)->delete();
         //return redirect('/alumnos');
     }

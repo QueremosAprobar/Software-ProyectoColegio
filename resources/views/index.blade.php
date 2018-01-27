@@ -181,7 +181,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							auto: true,
 							pager: true,
 							nav: false,
-							speed: 500,
+							speed: 200,
 
 							namespace: "callbacks",
 							before: function () {
