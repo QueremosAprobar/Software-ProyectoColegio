@@ -20,6 +20,7 @@ Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
 Route::resource('asignaciones','AsignacionController');
 
+Route::resource('cursos','CursoController');
 
 
 Route::get('/', 'InicioController@index');

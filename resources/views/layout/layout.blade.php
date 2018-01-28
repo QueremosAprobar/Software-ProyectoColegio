@@ -154,6 +154,9 @@
                                 <li>
                                     <a href="/aulas">Aulas</a>
                                 </li>
+                                <li>
+                                    <a href="/cursos">Cursos</a>
+                                </li>
 <<<<<<< HEAD
                                 <li>
                                     <a href="/notas">Notas</a>
