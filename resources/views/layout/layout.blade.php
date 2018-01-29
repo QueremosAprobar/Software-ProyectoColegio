@@ -156,17 +156,15 @@
                                 </li>
                                 <li>
                                     <a href="/cursos">Cursos</a>
-                                </li>
-<<<<<<< HEAD
+
                                 <li>
                                     <a href="/notas">Notas</a>
                                 </li>
-                                
-                                
-=======
-                                <li> <a href="/viewalumnos">ViewAlumnos</a></></li>
 
->>>>>>> 478261e896106532ed7a7818fc1613561766d853
+
+                                <li> <a href="/viewalumnos">ViewAlumnos</a></li>
+
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

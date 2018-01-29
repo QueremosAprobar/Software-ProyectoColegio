@@ -118,8 +118,8 @@ class DocenteController extends Controller
     {
         $this->validate($request,[
             'contraseña'=>['required','max:30','min:6'],
-            'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
-            'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'nombre'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
+            'apellido'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
             'direccion'=>['required','max:100'],
             'telefono'=>['required','size:9','regex:/^[0-9]+$/'],
             'email'=>['required','max:50','email']
