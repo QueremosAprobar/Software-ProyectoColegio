@@ -46,19 +46,39 @@ window.onload = iniciar;
 </script>
 
 @section('content')
-    <div class="row">
-        <div class="col-lg-12">
-            <h3 class="page-header">Seleccione su Curso
-                <SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
-                    <OPTION VALUE="1">Link1</OPTION>
-                    <OPTION VALUE="2">Link2</OPTION>
-                    <OPTION VALUE="3">Link3</OPTION>
-                    <OPTION VALUE="4">Link4</OPTION> 
-                </SELECT>
-            </h3>
+    @if(\App\Curso::all()->isEmpty())
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                x
+            </button>
+            No se tiene ningun Curso
+            <a href="#" class="alert-link">Ingrese Cursos</a>
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
+        @else
+            @if(session('mensaje'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                                x
+                    </button>
+                    {{ session('mensaje') }}
+                </div>
+            @endif
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Seleccione el Curso a modificar notas
+                    <SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+                        @foreach(\App\Curso::all() as $curso)
+                            <option value="{{$curso->nombre}}">
+                            {{$curso->nombre}}</option>
+                         @endforeach                 
+                    </SELECT>                
+                </h3>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    @endif
+
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
