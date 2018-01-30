@@ -14,6 +14,13 @@
 Route::resource('apoderados','ApoderadoController');
 Route::resource('alumnos','AlumnoController');
 
+Route::resource('notas','NotaController');
+
+Route::patch('/notas/{idnotas}',[
+    'as' => 'notas.update',
+    'notas' => 'NotaController@update'
+]);
+
 Route::resource('viewalumnos','ViewAlumnoController');
 
 Route::resource('docentes','DocenteController');
