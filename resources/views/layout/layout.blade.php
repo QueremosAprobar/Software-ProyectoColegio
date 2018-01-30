@@ -50,54 +50,11 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="mailto:tudireccion@email.com">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa
                     fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Ing Zamalloa</strong>
-                                    <span class="pull-right text-muted">
-                                    <em>Today</em>
-                                    </span>
-                                </div>
-                                <div>........</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Ing Zamalloa</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>At the Moment</em>
-                                    </span>
-                                </div>
-                                <div>.....</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>Ing Zamalloa</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Now</em>
-                                    </span>
-                                </div>
-                                <div>........</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+
                     <!-- /.dropdown-messages -->
                 </li>
                 <!-- /.dropdown -->
@@ -106,12 +63,22 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Cambiar
-                                Contraseña</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>
-                                Logout</a>
+                        {{--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Cambiar--}}
+                                {{--Contraseña</a>--}}
+                        {{--</li>--}}
+                        {{--<li class="divider"></li>--}}
+                        <li>
+                            {{--<a href="login.html"><i class="fa fa-sign-out fa-fw"></i>--}}
+                                {{--Logout</a>--}}
+                            <a href="{{ url('/logout') }}"
+                               onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                Cerrar Sesion
+                            </a>
+
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </li>
                     </ul>
                     <!--/.dropdown-user -->

@@ -14,13 +14,6 @@
 Route::resource('apoderados','ApoderadoController');
 Route::resource('alumnos','AlumnoController');
 
-Route::resource('notas','NotaController');
-
-Route::patch('/notas/{idnotas}',[
-    'as' => 'notas.update',
-    'notas' => 'NotaController@update'
-]);
-
 Route::resource('viewalumnos','ViewAlumnoController');
 
 Route::resource('docentes','DocenteController');
@@ -37,8 +30,11 @@ Route::get('contact', 'InicioController@contact');
 Route::get('layout', 'InicioController@layout');
 
 
-
 //
 //Route::get('/',function () {
 //    return view('layout.layout');
 //});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

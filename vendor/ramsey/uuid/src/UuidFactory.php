@@ -187,7 +187,6 @@ class UuidFactory implements UuidFactoryInterface
 
     public function fromString($uuid)
     {
-        $uuid = strtolower($uuid);
         return $this->codec->decode($uuid);
     }
 
@@ -281,8 +280,8 @@ class UuidFactory implements UuidFactoryInterface
         $fields = array(
             'time_low' => substr($hash, 0, 8),
             'time_mid' => substr($hash, 8, 4),
-            'time_hi_and_version' => str_pad(dechex($timeHi), 4, '0', STR_PAD_LEFT),
-            'clock_seq_hi_and_reserved' => str_pad(dechex($clockSeqHi), 2, '0', STR_PAD_LEFT),
+            'time_hi_and_version' => sprintf('%04x', $timeHi),
+            'clock_seq_hi_and_reserved' => sprintf('%02x', $clockSeqHi),
             'clock_seq_low' => substr($hash, 18, 2),
             'node' => substr($hash, 20, 12),
         );
