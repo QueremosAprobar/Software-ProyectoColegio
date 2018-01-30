@@ -30,8 +30,11 @@ Route::get('contact', 'InicioController@contact');
 Route::get('layout', 'InicioController@layout');
 
 
-
 //
 //Route::get('/',function () {
 //    return view('layout.layout');
 //});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
