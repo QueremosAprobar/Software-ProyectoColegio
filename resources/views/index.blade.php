@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#" data-toggle="modal" data-target="#myModal4"><span class="glyphicon glyphicon-user" 	aria-hidden="true"></span>Iniciar sesión</a></li>
 					@else
 							<li><a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-												{{$user_name}}
+												{{Auth::user()->dni}}
 										</a></li>
 							<li><a href="{{ url('/logout') }}"
 											onclick="event.preventDefault();
@@ -270,134 +270,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- login -->
 			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
 				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
+					<div class="col-md-12 col-md-offset-2">
+						<div class="panel panel-default">
+							<div class="panel-heading" style="color: white;background-color: #2a88bd;border-color: #2a88bd">Iniciar Sesion</div>
+							<div class="panel-body">
+								<form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+									{{ csrf_field() }}
 
-									<div class="login-right">
-										<center><h9>Registrarse</h9></center>
-										<form method="POST" action="/login">
-											<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-											<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-													<label for="text" class="col-md-4 control-label" >DNI</label>
+									{{--Campo DNI--}}
+									<div class="form-group{{ $errors->has('dni') ? ' has-error' : '' }}">
+										<label for="email" class="col-md-4 control-label">DNI</label>
 
-													<div class="col-md-6">
-															<input type="text" class="form-control" maxlength="8" name="dni" value="{{ old('dni') }}" required autofocus>
-															@if ($errors->has('email'))
-																	<span class="help-block">
-																			<strong>{{ $errors->first('email') }}</strong>
-																	</span>
-															@endif
-													</div>
-											</div>
+										<div class="col-md-6">
+											<input id="dni" type="text" class="form-control" name="dni" placeholder="Ingrese DNI">
 
-											<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-													<label for="password" class="col-md-4 control-label">CONTRASEÑA</label>
-													<div class="col-md-6">
-															<input id="password" type="password" class="form-control" name="password" required>
-															@if ($errors->has('password'))
-																	<span class="help-block">
-																			<strong>{{ $errors->first('password') }}</strong>
-																	</span>
-															@endif
-													</div>
-											</div>
-
-											<div class="sign-in">
-												<input type="submit" value="Iniciar sesión" >
-											</div>
-										</form>
-									</div>
-								<p><input type="checkbox" value="Aceptar" id="Aceptar" name="box" checked="true">Usted esta de acuerdo con nuestros terminos y condiciones de privacidad</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- login -->
-			<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >
-				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
-									<div class="login-bottom">
-										<h3>Sign up for free</h3>
-										<form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-											<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Dni</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="dni" value="{{ old('dni') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
+											@if ($errors->has('dni'))
+												<span class="help-block">
                                         <strong>{{ $errors->first('dni') }}</strong>
                                     </span>
-                                @endif
-                            </div>
-                        </div>
+											@endif
+										</div>
+									</div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+									{{--Campo Contraseña--}}
+									<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+										<label for="password" class="col-md-4 control-label">CONTRASEÑA</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+										<div class="col-md-6">
+											<input id="password" type="password" class="form-control" name="password" placeholder="Ingrese Contraseña" required>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
+											@if ($errors->has('password'))
+												<span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="tipo" class="col-md-4 control-label">tipo</label>
-
-                            <div class="col-md-6">
-                              <select name="tipos" id="tipo">
-                                <option value="Medico">Medico</option>
-                                <option value="Paciente">Paciente</option>
-                                <option value="Admi">Admi</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
+											@endif
+										</div>
 									</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+									<input id="tipo" type="text" name="tipo" placeholder="tipo" hidden>
+
+									<div class="form-group">
+										<div class="col-md-6 col-md-offset-4">
+											<button type="submit" class="btn btn-primary">
+												Iniciar Sesion
+											</button>
+										</div>
+									</div>
+
+								</form>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 <!-- MODAL PARA EDITAR DATOS PACIENTE -->
